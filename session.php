@@ -16,7 +16,7 @@
 
     session_start();
 
-    $_SESSION['name'] = 'mack';
+    $_SESSION['name'] = 'kevin';
 
     echo $_SESSION['name'];
 
