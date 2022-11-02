@@ -27,8 +27,10 @@ $formPWD=$_POST['pwd'];
 
 $chk=false;
 foreach($users as $user){
-    if($user['name']==$formAcc && $user['pwd']==$formPWD)
-    $chk=true;
+    if($user['name']==$formAcc && $user['pwd']==$formPWD){
+        $chk=true;
+        $_SESSION['login']=$user;
+    }
 }
 
 
@@ -36,7 +38,6 @@ if($chk){
     $_SESSION['login']=$formAcc;
     $times=$_COOKIE['times']+1;
     setcookie('times',$times,time()+(60*60*24*365));
-
 }else{
     $error="帳號或密碼錯誤";
 }

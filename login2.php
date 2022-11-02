@@ -34,12 +34,12 @@ if(!isset($_COOKIE['times'])){
             echo $_GET['error'];
             echo "</span>";
         }
-        if (isset($_SESSION['error'])) {
-            echo "<span style='color:red'>";
-            echo $_SESSION['error'];
-            echo "</span>";
-            unset($_SESSION['error']);
-        }
+        // if (isset($_SESSION['error'])) {
+        //     echo "<span style='color:red'>";
+        //     echo $_SESSION['error'];
+        //     echo "</span>";
+        //     unset($_SESSION['error']);
+        // }
     ?>
         <form action="check2.php" method="post">
             <div>帳號:<input type="text" name="acc" id=""></div>
